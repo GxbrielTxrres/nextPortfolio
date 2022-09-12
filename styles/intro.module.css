@@ -1,0 +1,23 @@
+.introContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  /* display: none; */
+}
+
+.introText {
+  width: 100%;
+  white-space: nowrap;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.introAnimation {
+  overflow: hidden;
+  white-space: nowrap;
+  letter-spacing: 0.3em; /* Adjust as needed */
+}

@@ -1,0 +1,33 @@
+.menuContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+.card {
+  border: 2px solid rgb(89, 181, 89);
+  padding: 10px 25px;
+  width: 325px;
+  box-shadow: 0 0 1rem 0 green;
+  border-radius: 10px;
+  margin: 20px 0;
+  font-size: 3rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.card:hover {
+  border: 2px solid rgb(89, 181, 89);
+  box-shadow: 0 0 1rem 0 blue;
+}
+
+.image {
+  width: 90%;
+  position: absolute;
+  top: 25px;
+}
