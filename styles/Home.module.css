@@ -24,10 +24,23 @@
 .card:hover {
   border: 2px solid rgb(89, 181, 89);
   box-shadow: 0 0 1rem 0 blue;
+  color: blue;
+  animation: flashing infinite;
 }
 
 .image {
   width: 90%;
   position: absolute;
   top: 25px;
+}
+
+.canvas {
+  background: #000;
+}
+
+@keyframes flashing {
+  from {
+  }
+  to {
+  }
 }

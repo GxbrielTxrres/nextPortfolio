@@ -1,0 +1,24 @@
+.cardContainer {
+  margin-inline: auto;
+  overflow: scroll;
+  color: rgb(89, 181, 89);
+  height: 500px;
+  width: 300px;
+  box-shadow: 0 0 1rem 0 blue;
+  border-radius: 5px;
+  background-color: hsla(0, 11%, 89%, 0.267);
+  backdrop-filter: blur(5px);
+  border-left: 4px solid blue;
+  border-top: 2px solid blue;
+  text-align: center;
+  align-items: center;
+  margin-top: 10vh;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding: 0px 10px;
+}
+
+.image {
+  border-radius: 15px;
+}

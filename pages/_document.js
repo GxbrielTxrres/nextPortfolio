@@ -15,6 +15,10 @@ class MyDocument extends Document {
             as="font"
             crossOrigin="anonymous"
           />
+          <script
+            src="https://kit.fontawesome.com/8dc4ebdb8d.js"
+            crossorigin="anonymous"
+          ></script>
         </Head>
         <body>
           <Main></Main>
