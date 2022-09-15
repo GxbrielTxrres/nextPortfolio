@@ -1,12 +1,7 @@
 import { animate, motion } from "framer-motion";
 import styles from "../styles/Home.module.css";
-import { useState } from "react";
 
 const Menu = () => {
-  const [showMenu, setShowMenu] = useState(false);
-  function openMenu() {
-    setShowMenu(!showMenu);
-  }
   return (
     <div>
       <button onClick={openMenu} name="menuButton">

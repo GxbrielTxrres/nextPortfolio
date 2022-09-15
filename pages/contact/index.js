@@ -1,16 +1,17 @@
 import styles from "../../styles/Contact.module.css";
 import { motion } from "framer-motion";
-import Menu from "../../components/menu";
-import { useState } from "react";
+import { useRef } from "react";
 
 export default function Contact() {
-  const [showMenu, setShowMenu] = useState(false);
-  function openMenu() {
-    setShowMenu(!showMenu);
-  }
+  const menu = useRef(null);
+  const onButtonClick = () => {
+    menu.current.style.display = "none";
+  };
   return (
     <div className={styles.container}>
       <motion.h1
+        ref={menu}
+        onClick={onButtonClick}
         animate={{
           y: [0, -10],
           opacity: [0, 0.5, 1],

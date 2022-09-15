@@ -1,6 +1,5 @@
 .cardContainer {
   margin-inline: auto;
-  overflow: scroll;
   color: rgb(89, 181, 89);
   height: 500px;
   width: 300px;
