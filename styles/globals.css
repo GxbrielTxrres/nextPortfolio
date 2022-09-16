@@ -6,6 +6,12 @@ body {
     Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+canvas {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+}
+
 h1 {
   font-size: 2.5rem;
   font-weight: 900;
@@ -25,10 +31,15 @@ form {
 }
 
 button {
+  font-family: silkscreen;
   margin-top: 20px;
   border-radius: 5px;
   padding: 10px 50px;
   font-size: 1.25rem;
+  background-color: transparent;
+  outline: unset;
+  border: unset;
+  color: rgb(113, 228, 12);
 }
 
 label,
@@ -53,16 +64,6 @@ i {
 
 * {
   box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
 }
 
 @font-face {

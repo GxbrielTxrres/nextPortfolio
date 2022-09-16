@@ -1,17 +1,12 @@
 import styles from "../../styles/Contact.module.css";
 import { motion } from "framer-motion";
 import { useRef } from "react";
-
+import Menu from "../../components/menu";
 export default function Contact() {
-  const menu = useRef(null);
-  const onButtonClick = () => {
-    menu.current.style.display = "none";
-  };
   return (
     <div className={styles.container}>
+      <Menu />
       <motion.h1
-        ref={menu}
-        onClick={onButtonClick}
         animate={{
           y: [0, -10],
           opacity: [0, 0.5, 1],
@@ -39,9 +34,10 @@ export default function Contact() {
             delay: 0.5,
           }}
         >
-          <label htmlFor="firstName">First Name:</label>
+          <label htmlFor="firstName">Name:</label>
           <input type="text" name="firstName" />
         </motion.div>
+
         <motion.div
           animate={{
             y: [0, -10],
@@ -51,20 +47,6 @@ export default function Contact() {
             duration: 0.5,
             times: [0, 0.5, 1],
             delay: 1,
-          }}
-        >
-          <label htmlFor="lastName">Last Name:</label>
-          <input type="text" name="lastName" />
-        </motion.div>
-        <motion.div
-          animate={{
-            y: [0, -10],
-            opacity: [0.1, 0.5, 1],
-          }}
-          transition={{
-            duration: 0.5,
-            times: [0, 0.5, 1],
-            delay: 1.5,
           }}
         >
           <label htmlFor="Email">Email:</label>
@@ -78,7 +60,7 @@ export default function Contact() {
           transition={{
             duration: 0.5,
             times: [0, 0.5, 1],
-            delay: 2,
+            delay: 1.5,
           }}
         >
           <label htmlFor="message">Message:</label>
@@ -97,7 +79,7 @@ export default function Contact() {
           transition={{
             duration: 0.5,
             times: [0, 0.5, 1],
-            delay: 2.5,
+            delay: 2,
           }}
         >
           <button type="submit" value="">

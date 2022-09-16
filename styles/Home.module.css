@@ -4,9 +4,11 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  min-height: 100vh;
-  position: relative;
-  z-index: 1;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
 }
 
 .card {
@@ -25,7 +27,6 @@
   border: 2px solid rgb(89, 181, 89);
   box-shadow: 0 0 1rem 0 blue;
   color: blue;
-  animation: flashing infinite;
 }
 
 .image {
@@ -34,13 +35,25 @@
   top: 25px;
 }
 
-.canvas {
-  background: #000;
+.hide {
+  display: none;
 }
 
-@keyframes flashing {
-  from {
-  }
-  to {
-  }
+.menuButton {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 0.8rem;
+  padding: 10px 20px;
+  background-color: transparent;
+  outline: unset;
+  border: unset;
+  z-index: 3;
+}
+
+.home {
+  position: absolute;
+  top: 25px;
+  left: 10px;
+  font-size: 0.8rem;
 }
