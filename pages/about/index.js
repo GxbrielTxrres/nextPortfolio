@@ -1,7 +1,7 @@
 import Card from "../../components/card";
 import Head from "next/head";
 import Menu from "../../components/menu";
-import { useRef } from "react";
+
 export default function Home() {
   return (
     <div>

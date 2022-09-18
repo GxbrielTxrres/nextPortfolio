@@ -1,14 +1,15 @@
 import "../styles/globals.css";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { Stars, OrbitControls } from "@react-three/drei";
-import styles from "../styles/Home.module.css";
-import { Suspense, useRef } from "react";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls, SpotLight, Stars, Effects } from "@react-three/drei";
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
       <Canvas dpr={1.5}>
         <OrbitControls />
+        <ambientLight />
+        <SpotLight position={[0, 4, 0]} />
+
         <Stars />
       </Canvas>
       <Component {...pageProps} />

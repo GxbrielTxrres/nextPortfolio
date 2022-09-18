@@ -5,11 +5,18 @@ import { useState, useRef } from "react";
 const Menu = () => {
   const [isOpen, setIsOpen] = useState(false);
   const button = useRef(null);
+  const menu = useRef(null);
+
   const handleClickEvent = () => {
     setIsOpen(!isOpen);
-    isOpen
-      ? (button.current.innerHTML = "Menu")
-      : (button.current.innerHTML = "Close");
+    if (!isOpen) {
+      button.current.innerHTML = "Close";
+      menu.current.style.display = "flex";
+      menu.current.style.zIndex = 5;
+    } else {
+      button.current.innerHTML = "Menu";
+      menu.current.style.display = "none";
+    }
   };
   return (
     <>
@@ -23,18 +30,16 @@ const Menu = () => {
         </button>
       </div>
 
+      <a className={styles.home} href="/">
+        <i className="fa-sharp fa-solid fa-house"></i>
+      </a>
+
       <motion.div
+        ref={menu}
         animate={{ opacity: [0, 1] }}
         transition={{ duration: 1, delay: 1 }}
         className={`${isOpen ? `${styles.menuContainer}` : `${styles.hide}`}`}
       >
-        {/* social media links */}
-        <div className={styles.home}>
-          <a href="/">
-            <i className="fa-sharp fa-solid fa-house"></i>
-          </a>
-        </div>
-
         {/* MENU OPTIONS */}
         <motion.a
           whileTap={{ scale: 0.8 }}
